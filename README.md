@@ -1,63 +1,65 @@
-Um aplicativo **CLI em Python** que detecta automaticamente sua localização e exibe **clima atual**, **previsão de 5 dias** e **qualidade do ar**, usando a API gratuita do **OpenWeatherMap**.
+---
 
-O foco do projeto é fornecer informações meteorológicas detalhadas diretamente no terminal, de forma simples e informativa.
+A **Python CLI application** that automatically detects your location and displays **current weather**, **5-day forecast**, and **air quality**, using the free **OpenWeatherMap** API.
+
+The project’s goal is to provide detailed meteorological information directly in the terminal, in a simple and informative way.
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Features
 
-* 📍 **Detecção automática de localização** via IP (com fallback manual)
-* 🌡️ **Clima atual**
+* 📍 **Automatic location detection** via IP (with manual fallback)
+* 🌡️ **Current weather**
 
-  * Temperatura atual, mínima e máxima
-  * Sensação térmica
-  * Umidade, pressão e visibilidade
-  * Cobertura de nuvens
-* 🌬️ **Dados de vento**
+  * Current, minimum, and maximum temperature
+  * Feels-like temperature
+  * Humidity, pressure, and visibility
+  * Cloud coverage
+* 🌬️ **Wind data**
 
-  * Velocidade
-  * Direção (cardinal)
-  * Rajadas (quando disponíveis)
-* 🔥❄️ **Cálculos avançados**
+  * Speed
+  * Direction (cardinal)
+  * Gusts (when available)
+* 🔥❄️ **Advanced calculations**
 
-  * Índice de calor (Heat Index)
-  * Sensação térmica por vento (Wind Chill)
-* 🌅 **Horários locais**
+  * Heat Index
+  * Wind Chill
+* 🌅 **Local times**
 
-  * Nascer e pôr do sol ajustados ao fuso horário
-* 🌫️ **Qualidade do ar (AQI)**
+  * Sunrise and sunset adjusted to the local timezone
+* 🌫️ **Air Quality (AQI)**
 
-  * Classificação (Good → Very Poor)
-  * Recomendações de saúde
-* 📆 **Previsão de 5 dias**
+  * Classification (Good → Very Poor)
+  * Health recommendations
+* 📆 **5-day forecast**
 
-  * Intervalos de 3 horas
-  * Temperatura, sensação térmica
-  * Probabilidade de precipitação
-  * Chuva, neve e vento
+  * 3-hour intervals
+  * Temperature and feels-like
+  * Precipitation probability
+  * Rain, snow, and wind
 
 ---
 
-## 🧰 Tecnologias Utilizadas
+## 🧰 Technologies Used
 
 * Python 3
 * [`requests`](https://docs.python-requests.org/)
 * [`pytz`](https://pypi.org/project/pytz/)
-* API do [OpenWeatherMap](https://openweathermap.org/api)
-* Serviço de geolocalização via IP (`ipinfo.io`)
+* [OpenWeatherMap API](https://openweathermap.org/api)
+* IP-based geolocation service (`ipinfo.io`)
 
 ---
 
-## 📦 Instalação
+## 📦 Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/seu-usuario/weather-cli.git
+git clone https://github.com/your-username/weather-cli.git
 cd weather-cli
 ```
 
-2. Instale as dependências:
+2. Install the dependencies:
 
 ```bash
 pip install requests pytz
@@ -65,63 +67,61 @@ pip install requests pytz
 
 ---
 
-## 🔑 Configuração da API
+## 🔑 API Configuration
 
-Este projeto usa a **API gratuita do OpenWeatherMap**.
+This project uses the **free OpenWeatherMap API**.
 
-1. Crie uma conta em:
+1. Create an account at:
    [https://openweathermap.org/api](https://openweathermap.org/api)
-2. Gere sua **API Key**
-3. Substitua a chave no código:
+2. Generate your **API Key**
+3. Replace the key in the code:
 
 ```python
-api_key = 'SUA_API_KEY_AQUI'
+api_key = 'YOUR_API_KEY_HERE'
 ```
 
-⚠️ **Importante:** Não é recomendado commitar sua API key em repositórios públicos.
+⚠️ **Important:** It is not recommended to commit your API key to public repositories.
 
 ---
 
-## ▶️ Como Usar
+## ▶️ How to Use
 
-Execute o script:
+Run the script:
 
 ```bash
 python weather.py
 ```
 
-O programa irá:
+The program will:
 
-1. Testar a validade da API key
-2. Detectar automaticamente sua localização
-3. Buscar dados meteorológicos atuais
-4. Exibir previsão detalhada de 5 dias
-5. Mostrar informações de qualidade do ar (quando disponíveis)
-
----
-
-## 🧠 Observações
-
-* Caso a detecção automática falhe, o programa solicita os dados manualmente
-* A API gratuita pode ter limitações de disponibilidade para qualidade do ar em algumas regiões
-* Todos os horários são ajustados para o **fuso local detectado**
+1. Validate the API key
+2. Automatically detect your location
+3. Fetch current weather data
+4. Display a detailed 5-day forecast
+5. Show air quality information (when available)
 
 ---
 
-## 📄 Licença
+## 🧠 Notes
 
-Este projeto é distribuído sob a licença **MIT**.
-Sinta-se à vontade para usar, modificar e distribuir.
-
----
-
-## 🚀 Próximas Ideias (Opcional)
-
-* Exportar dados para JSON ou CSV
-* Interface gráfica (GUI)
-* Cache local para reduzir chamadas à API
-* Suporte a múltiplos idiomas
-* Alertas meteorológicos
+* If automatic detection fails, the program will ask for manual input
+* The free API may have availability limitations for air quality data in some regions
+* All times are adjusted to the **detected local timezone**
 
 ---
 
+## 📄 License
+
+This project is distributed under the **MIT** license.
+Feel free to use, modify, and distribute it.
+
+---
+
+## 🚀 Future Ideas
+
+* Export data to JSON or CSV
+* Local cache to reduce API calls
+* Multi-language support
+* Weather alerts
+
+---
