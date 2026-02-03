@@ -55,7 +55,7 @@ The project’s goal is to provide detailed meteorological information directly 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/weather-cli.git
+git clone https://github.com/pabloarzaoo/Weather-Thing
 cd weather-cli
 ```
 
